@@ -1,0 +1,113 @@
+--- 
+Cucumber Features: 
+  :original_result: {}
+
+  :created_at: 2013-04-19 18:50:22.571939 -07:00
+RSpec: 
+  :original_result: 
+    /home/ubuntu/ElectricUnicorn/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    /home/ubuntu/ElectricUnicorn/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    /home/ubuntu/ElectricUnicorn/app/helpers/movies_helper.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    /home/ubuntu/ElectricUnicorn/app/controllers/movies_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 2
+    - 2
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /home/ubuntu/ElectricUnicorn/app/models/movie.rb: 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+  :created_at: 2013-04-19 20:54:18.967748 -07:00

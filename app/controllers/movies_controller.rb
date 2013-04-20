@@ -7,6 +7,8 @@ class MoviesController < ApplicationController
   end
 
   def index
+    @message = session[:director]
+    session[:director] = nil
     sort = params[:sort] || session[:sort]
     case sort
     when 'title'
@@ -26,7 +28,9 @@ class MoviesController < ApplicationController
       flash.keep
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
-
+    if session[:director]!=nil
+      @text = "'#{session[:director]}' has no director info"
+    end
     if params[:ratings] != session[:ratings] and @selected_ratings != {}
       session[:sort] = sort
       session[:ratings] = @selected_ratings
@@ -48,6 +52,14 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find params[:id]
+  end
+
+  def directors
+    @movie = Movie.find params[:id]
+    session[:director] = @movie.title and redirect_to movies_path if 	@movie.director=="" or @movie.director == nil
+    @movies = Movie.find_all_by_director @movie.director
+    @selected_ratings = params[:ratings] || session[:ratings] || {}
+    @all_ratings = Movie.all_ratings
   end
 
   def update

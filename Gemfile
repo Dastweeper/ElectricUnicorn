@@ -11,6 +11,7 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'simplecov'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'simplecov'
