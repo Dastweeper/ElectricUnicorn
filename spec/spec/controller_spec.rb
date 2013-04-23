@@ -26,4 +26,32 @@ describe MoviesController, :type => :controller do
       get :directors, {:id => "9"}
     end
   end
+  describe "the application" do
+    it 'should return to the movies path on destroy' do
+      movie = mock('Movie')
+      movie.stub!(:title)
+      Movie.stub(:find).with('6').and_return(movie)
+      movie.stub(:destroy)
+      post :destroy, {:id => '6'}
+      response.should redirect_to movies_path
+    end
+    it 'should return to the movies path on create' do
+      movie = mock('Movie')
+      movie.stub!(:title)
+      Movie.stub(:find).with('6').and_return(movie)
+      movie.stub(:create)
+      get :create, {:id => '6'}
+      response.should redirect_to movies_path
+    end
+    it 'should sort the movies by ratings' do
+      get :index, {:ratings => {:g => 1}}
+      response.should redirect_to movies_path(:ratings => {:g => 1})
+    end
+    it 'should redirect if sort order has been changed' do
+      session[:sort] = 'release_date'
+      session[:ratings] = 'G'
+      get :index, {:sort => 'title', :ratings => {:g => 1}}
+      response.should redirect_to movies_path(:sort=> 'title',:ratings => {:g => 1})
+    end
+  end
 end
